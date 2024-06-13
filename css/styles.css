@@ -1,0 +1,288 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+    max-width: 1000px;
+    padding: 2em 1em;
+    margin: 1em 0;
+    text-align: center;
+    color: #000; /* Define a cor do texto para preto nas seções */
+    background-color: #fff; /* Define a cor de fundo para branco nas seções */
+}
+
+#intro {
+    padding: 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; /* Cor do texto na seção de introdução */
+    background-color: #333; /* Cor de fundo na seção de introdução */
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Ajusta para coluna no layout de mobile */
+}
+
+.profile-pic {
+    max-width: 150px;
+    margin-bottom: 20px; /* Espaço inferior para separar da lista de tecnologias */
+    border-radius: 50%;
+}
+
+.technologies {
+    flex-grow: 1;
+}
+
+.technologies ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Centraliza os itens */
+}
+
+.technologies li {
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.contact-links {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-links a {
+    display: block;
+    margin: 5px 0;
+    padding: 10px 20px;
+    background: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.contact-links a:hover {
+    background: #000;
+}
+
+.contact-info {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-item {
+    border: 2px solid #555; /* Adiciona uma borda sólida de 2px */
+    border-radius: 5px;
+    margin: 0 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #555; /* Cor da borda */
+    transition: background-color 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: #555; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.contact-item img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.contact-item .icon-text {
+    font-size: 0.9em;
+}
+
+.contact-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000; /* Cor da borda */
+}
+
+.contact-item a:hover {
+    background-color: #555; /* Muda a cor de fundo ao passar o mouse */
+}
+
+#skills {
+    background-color: #fff;
+    padding: 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.skill img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+#projects {
+    text-align: center;
+}
+
+.project {
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 3px;
+    width: calc(25% - 20px); /* Ajusta para 25% da largura com margem */
+    box-sizing: border-box;
+}
+
+.project h2 {
+    margin-top: 0;
+}
+
+.project-description {
+    padding: 10px 0;
+}
+
+.project-description p {
+    margin: 0;
+}
+
+.project-description a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 20px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-description a:hover {
+    background-color: #000;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+}
+
+/* Media Queries para responsividade */
+
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .project {
+        width: calc(50% - 20px); /* Ajusta para 50% da largura com margem */
+        margin-bottom: 20px;
+    }
+
+    .contact-links a {
+        width: 100%; /* Ajusta os botões para 100% da largura */
+        max-width: none; /* Remove o máximo de largura */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill img {
+        width: 60px; /* Aumenta o tamanho dos ícones para telas menores */
+        height: 60px;
+    }
+
+    .technologies ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .technologies li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .contact-links a {
+        width: 100%; /* Ajusta os botões para 100% da largura */
+        max-width: none; /* Remove o máximo de largura */
+    }
+
+    .project {
+        width: 100%; /* Ajusta para 100% da largura com margem */
+        margin-bottom: 20px;
+    }
+}
